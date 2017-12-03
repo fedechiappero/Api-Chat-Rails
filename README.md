@@ -4,7 +4,7 @@ This project was made as final project of the course Technology Seminary. A priv
 
 ## Functionality
 
-* Autentication with Devise.
+* Token-based autentication with Devise.
 * Registration is only with an email provided by the enterprise email server (@yourdomain.com by default).
 * Online/Offline indicator inside chat room.
 * Private chat rooms, either personal or group.
@@ -35,6 +35,10 @@ heat water
 npm install (drink a coffee meanwhile)
 npm start
 ```    
+
+## Useful links
+
+* [Postman](https://www.getpostman.com/) to test the API without a client.
 
 ## Authors
 
