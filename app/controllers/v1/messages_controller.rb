@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 class V1::MessagesController < V1::BaseController
+
+  #before_action :authenticate_user!
+
   expose :message
   expose :messages, -> { Message.order(created_at: :desc).page(params[:page]).per(15) }
 
