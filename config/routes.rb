@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   scope 'api' do
     namespace :v1 do
       resources :messages, only: [:index, :create]
-      resources :users, only: [:create]
+      resources :users, only: [:index, :create]
     end
   end
   get '*path', to: redirect('/', path: '?%{path}')
