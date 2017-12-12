@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class Message < ApplicationRecord
-  validates :body, :sender, presence: true
+  validates :body, :chatroom_id, :sender_id, presence: true
 
   after_create :broadcast
 

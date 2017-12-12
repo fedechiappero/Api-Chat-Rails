@@ -17,9 +17,17 @@ class V1::ChatroomsController < V1::BaseController
         render_api(chatroom)
     end
 
+    def destroy
+        chatrooms = Chatroom.find(params[:id])
+        if chatroom
+            chatroom.destroy
+        end
+        render_api(chatroom)
+    end
+
     private
     
     def chat_params
-        params.require(:chatroom).permit(:user_id1, :user_id2)
+        params.require(:chatroom).permit(:user_id1, :user_id2, :id)
     end
 end

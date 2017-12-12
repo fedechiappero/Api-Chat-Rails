@@ -18,6 +18,6 @@ class V1::MessagesController < V1::BaseController
   private
 
   def message_params
-    params.require(:message).permit(:body, :sender)
+    params.require(:message).permit(:body, :chatroom_id, :sender_id)
   end
 end
