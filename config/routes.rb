@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :messages, only: [:index, :create]
       resources :users, only: [:index, :create]
-      resources :chatrooms, only: [:index, :create, :destroy]
+      resources :chatrooms, only: [:index, :create, :show, :destroy]
     end
   end
   get '*path', to: redirect('/', path: '?%{path}')

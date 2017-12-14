@@ -4,7 +4,7 @@ class V1::ChatroomsController < V1::BaseController
     
     def index
         usr = params[:userLogged]
-        chatrooms = Chatroom.where('user_id1' => User.find(usr.to_i)).or(Chatroom.where('user_id2' => User.find(usr.to_i)))
+        chatrooms = Chatroom.includes(:user1, :user2).where(user_id1: User.find(usr.to_i)).or(Chatroom.includes(:user1, :user2).where(user_id2: User.find(usr.to_i)))
         render_api(chatrooms)
     end
 
@@ -14,6 +14,11 @@ class V1::ChatroomsController < V1::BaseController
         chatroom.user1 = User.find(usr1)
         chatroom.user2 = User.find(usr2)
         chatroom.save 
+        render_api(chatroom)
+    end
+
+    def show
+        chatroom = Chatroom.find(params[:id])
         render_api(chatroom)
     end
 

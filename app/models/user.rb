@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
           :validatable
           
   include DeviseTokenAuth::Concerns::User
+
+  has_many :chatrooms
+  has_many :messages
 end
