@@ -1,6 +1,6 @@
 class V1::ChatroomsController < V1::BaseController
     
-    #expose :chatroom
+    expose :chatroom#works on create
     
     def index
         usr = params[:userLogged]
