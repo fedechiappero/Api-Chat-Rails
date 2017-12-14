@@ -1,6 +1,6 @@
 class V1::ChatroomsController < V1::BaseController
     
-    expose :chatroom
+    #expose :chatroom
     
     def index
         usr = params[:userLogged]
@@ -18,12 +18,12 @@ class V1::ChatroomsController < V1::BaseController
     end
 
     def show
-        chatroom = Chatroom.find(params[:id])
+        chatroom = Chatroom.includes(:user1, :user2).find(params[:id])
         render_api(chatroom)
     end
 
     def destroy
-        chatrooms = Chatroom.find(params[:id])
+        chatroom = Chatroom.find(params[:id])
         if chatroom
             chatroom.destroy
         end
