@@ -28,10 +28,6 @@ Rails 5.1.3
 bundle install
 
 rails db:create db:migrate
-
-heat water
-npm install (drink a coffee meanwhile)
-npm start
 ```    
 
 ## Useful links
