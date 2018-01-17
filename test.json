@@ -30,6 +30,17 @@
 			"response": []
 		},
 		{
+			"name": "INDEX: List all Messages from Chat",
+			"request": {
+				"url": "http://192.168.11.44:8080/api/v1/messages?chatroom=10",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "CREATE: New Chatroom",
 			"request": {
 				"url": "http://192.168.11.44:8080/api/v1/chatrooms",
@@ -84,6 +95,26 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"email\": \"fede@yourdomain.com\", \"password\": \"fede0000\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE: Message",
+			"request": {
+				"url": "http://192.168.11.44:8080/api/v1/messages",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\": \"message sent by postman\",\n    \"chatroom_id\": \"1\"\n,\n    \"sender_id\": \"1\"\n}"
 				},
 				"description": ""
 			},
@@ -149,26 +180,6 @@
 					}
 				],
 				"body": {},
-				"description": ""
-			},
-			"response": []
-		},
-{
-			"name": "CREATE: Message",
-			"request": {
-				"url": "http://192.168.11.44:8080/api/v1/messages",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"body\": \"message sent by postman\",\n    \"chatroom_id\": \"1\"\n,\n    \"sender_id\": \"1\"\n}"
-				},
 				"description": ""
 			},
 			"response": []

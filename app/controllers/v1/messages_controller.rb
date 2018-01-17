@@ -4,9 +4,11 @@ class V1::MessagesController < V1::BaseController
   #before_action :authenticate_user!
 
   expose :message
-  expose :messages, -> { Message.order(created_at: :desc).page(params[:page]).per(15) }
+  #expose :messages, -> { Message.order(created_at: :desc).page(params[:page]).per(15) }
 
   def index
+    chatroom = Chatroom.find(params[:chatroom])
+    messages = Message.where(chatroom_id: chatroom)
     render_api(messages)
   end
 
