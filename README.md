@@ -20,6 +20,8 @@ These instructions will get you a copy of the project up and running on your loc
 Ruby 2.3.1p112
 
 Rails 5.1.3
+
+PostgreSQL 9.5.10
 ```
 
 ### Installing
@@ -28,7 +30,15 @@ Rails 5.1.3
 bundle install
 
 rails db:create db:migrate
-```    
+```  
+
+### Running  
+
+```
+sudo service postgresql start
+
+rails s -b yourIp -p yourPort
+```
 
 ## Useful links
 
