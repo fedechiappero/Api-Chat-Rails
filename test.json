@@ -127,6 +127,11 @@
 				"method": "DELETE",
 				"header": [
 					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
 						"key": "access-token",
 						"value": "JuDzkopq6Z2I7wcpUIttGA",
 						"description": ""

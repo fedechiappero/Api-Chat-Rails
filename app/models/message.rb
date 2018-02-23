@@ -7,6 +7,6 @@ class Message < ApplicationRecord
   private
 
   def broadcast
-    ActionCable.server.broadcast('chat', as_json.merge(action: 'CreateMessage'))
+    ActionCable.server.broadcast("chat_rooms_#{chatroom_id}_channel", as_json.merge(action: 'ReceiveMessage'))
   end
 end

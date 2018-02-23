@@ -47,5 +47,5 @@ Rails.application.configure do
 
   config.action_cable.disable_request_forgery_protection = true
 
-config.action_cable.allowed_request_origins = [ /https?:\/\/localhost:\d+/, /https?:\/\/192.168.11.44:\d+/ ]
+config.action_cable.allowed_request_origins = [ /https?:\/\/localhost:\d+/, /https?:\/\/192.168.11.44:\d+/, /https?:\/\/192.168.1.106:\d+/ ]
 end

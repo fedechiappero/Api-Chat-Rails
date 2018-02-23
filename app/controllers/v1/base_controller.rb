@@ -10,9 +10,4 @@ class V1::BaseController < ApplicationController
       render json: object, status: status
     end
   end
-
-  # def perform(message)
-  #   ActionCable.server.broadcast "chat_rooms_#{message.chat_room.id}_channel",
-  #                                message: render_message(message)
-  # end
 end
