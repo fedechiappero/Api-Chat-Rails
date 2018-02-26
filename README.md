@@ -1,13 +1,11 @@
-# Chat (WIP)
+# Chat (backend)
 
 This project was made as final project of the course Technology Seminary. A private chat room thought to be used by an enterprise for their internal communication. Backend Ruby on Rails APIRest, Frontend on [Ionic](https://github.com/fedechiappero/ionic_chat).
 
 ## Functionality (expected)
 
-* Registration is only with an email provided by the enterprise email server (@yourdomain.com by default).
-* Online/Offline indicator inside chat room.
+* Registration/Login.
 * Private chat rooms, only personal.
-* All the messages are encrypted in the server-side.
 
 ## Getting Started
 
